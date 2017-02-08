@@ -5,22 +5,28 @@
   
   <title>pm2,supervisor,forever区别 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="启动server.js 不监听变化。pm21pm2 start server.js --name my-named-server -l log.log -o out.log -e err.logforever1forever server.js启动server.js 监听变化
-
-pm21pm2 start server.js --name my-named-server -l log.log -o">
+  <meta name="description" content="启动server.js 不监听变化。
+pm2pm21pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log
+foreverforever1forever server.js
+启动server.js 监听变化
+pm2pm21pm2 start server.js --name my-named-serve">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pm2,supervisor,forever区别">
 <meta property="og:url" content="http://yoursite.com/2017/02/08/pm2-supervisor-forever区别/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="启动server.js 不监听变化。pm21pm2 start server.js --name my-named-server -l log.log -o out.log -e err.logforever1forever server.js启动server.js 监听变化
-
-pm21pm2 start server.js --name my-named-server -l log.log -o">
-<meta property="og:updated_time" content="2017-02-08T06:27:36.196Z">
+<meta property="og:description" content="启动server.js 不监听变化。
+pm2pm21pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log
+foreverforever1forever server.js
+启动server.js 监听变化
+pm2pm21pm2 start server.js --name my-named-serve">
+<meta property="og:updated_time" content="2017-02-08T06:30:01.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pm2,supervisor,forever区别">
-<meta name="twitter:description" content="启动server.js 不监听变化。pm21pm2 start server.js --name my-named-server -l log.log -o out.log -e err.logforever1forever server.js启动server.js 监听变化
-
-pm21pm2 start server.js --name my-named-server -l log.log -o">
+<meta name="twitter:description" content="启动server.js 不监听变化。
+pm2pm21pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log
+foreverforever1forever server.js
+启动server.js 监听变化
+pm2pm21pm2 start server.js --name my-named-serve">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -91,15 +97,16 @@ pm21pm2 start server.js --name my-named-server -l log.log -o">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2>启动server.js 不监听变化。</h2><br><figure class="highlight plain"><figcaption><span>pm2</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log</div></pre></td></tr></table></figure><br><br><figure class="highlight plain"><figcaption><span>forever</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">forever server.js</div></pre></td></tr></table></figure><br><br><h2>启动server.js 监听变化</h2>
-
-<figure class="highlight plain"><figcaption><span>pm2</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log --watch</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>supervisor</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">supervisor server.js</div></pre></td></tr></table></figure>
-<h2>停止服务</h2>
-
-<h4>supervisor</h4><br>借助bash,找到 supervisor的pid和所启动的server.js的pid.同时kill<br><br><h4>forever</h4><br>借助bash,找到 forever的pid和所启动的server.js的pid.同时kill<br><br><h4>pm2</h4>
-
-<figure class="highlight plain"><figcaption><span>pm2</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 stop my-named-server或着：pm2 delete my-named-server</div></pre></td></tr></table></figure>
+        <p></p><h2>启动server.js 不监听变化。</h2><p></p>
+<p></p><h4>pm2</h4><br><figure class="highlight plain"><figcaption><span>pm2</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log</div></pre></td></tr></table></figure><p></p>
+<p></p><h4>forever</h4><br><figure class="highlight plain"><figcaption><span>forever</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">forever server.js</div></pre></td></tr></table></figure><p></p>
+<p></p><h2>启动server.js 监听变化</h2><p></p>
+<p></p><h4>pm2</h4><br><figure class="highlight plain"><figcaption><span>pm2</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log --watch</div></pre></td></tr></table></figure><p></p>
+<p></p><h4>supervisor</h4><br><figure class="highlight plain"><figcaption><span>supervisor</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">supervisor server.js</div></pre></td></tr></table></figure><p></p>
+<p></p><h2>停止服务</h2><p></p>
+<p></p><h4>supervisor</h4><br>借助bash,找到 supervisor的pid和所启动的server.js的pid.同时kill<p></p>
+<p></p><h4>forever</h4><br>借助bash,找到 forever的pid和所启动的server.js的pid.同时kill<p></p>
+<p></p><h4>pm2</h4><br><figure class="highlight plain"><figcaption><span>pm2</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 stop my-named-server或着：pm2 delete my-named-server</div></pre></td></tr></table></figure><p></p>
 
       
     </div>
