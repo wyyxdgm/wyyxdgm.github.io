@@ -83,14 +83,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#启动server.js 不监听变化。</p>
-<figure class="highlight plain"><figcaption><span>[pm2] []</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>[forever] []</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">forever server.js</div></pre></td></tr></table></figure>
-<p>#启动server.js 监听变化。<br>supervisor server.js<br>pm2 start server.js –name my-named-server -l log.log -o out.log -e err.log –watch</p>
-<p>#停止服务======</p>
-<p>##supervisor<br>借助bash,找到 supervisor的pid和所启动的server.js的pid.同时kill</p>
-<p>##forever<br>借助bash,找到 forever的pid和所启动的server.js的pid.同时kill</p>
-<p>##pm2<br>pm2 stop my-named-server或着：pm2 delete my-named-server</p>
+        <li>启动server.js 不监听变化。</li><br><p><br><figure class="highlight plain"><figcaption><span>pm2</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log</div></pre></td></tr></table></figure><br></p><br><p><br><figure class="highlight plain"><figcaption><span>forever</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">forever server.js</div></pre></td></tr></table></figure><br></p><br><li>启动server.js 监听变化</li><br><p><br><figure class="highlight plain"><figcaption><span>pm2</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log --watch</div></pre></td></tr></table></figure><br></p><br><br><p><br><figure class="highlight plain"><figcaption><span>supervisor</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">supervisor server.js</div></pre></td></tr></table></figure><br></p><br><br><li>停止服务</li>
+
+<p></p><h4>supervisor</h4><br>借助bash,找到 supervisor的pid和所启动的server.js的pid.同时kill<p></p>
+<p></p><h4>forever</h4><br>借助bash,找到 forever的pid和所启动的server.js的pid.同时kill<p></p>
+<p></p><h4>pm2</h4><p></p>
+<p><br><figure class="highlight plain"><figcaption><span>pm2</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 stop my-named-server或着：pm2 delete my-named-server</div></pre></td></tr></table></figure><br></p>
 
       
     </div>
